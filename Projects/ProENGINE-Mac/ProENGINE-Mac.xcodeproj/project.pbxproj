@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD200A1716C131A600666B06 /* Debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD200A1116C131A600666B06 /* Debug.cpp */; };
+		FD200A1816C131A600666B06 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD200A1216C131A600666B06 /* Engine.cpp */; };
+		FD200A1916C131A600666B06 /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD200A1316C131A600666B06 /* EventManager.cpp */; };
+		FD200A1A16C131A600666B06 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD200A1416C131A600666B06 /* main.cpp */; };
+		FD200A1B16C131A600666B06 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD200A1516C131A600666B06 /* Renderer.cpp */; };
+		FD200A1C16C131A600666B06 /* ResourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD200A1616C131A600666B06 /* ResourceLoader.cpp */; };
+		FD200A2116C1321A00666B06 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD200A1D16C1321A00666B06 /* sfml-graphics.framework */; };
+		FD200A2216C1321A00666B06 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD200A1E16C1321A00666B06 /* sfml-system.framework */; };
+		FD200A2316C1321A00666B06 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD200A1F16C1321A00666B06 /* sfml-window.framework */; };
+		FD200A2416C1321A00666B06 /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD200A2016C1321A00666B06 /* SFML.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD2009F516C1312300666B06 /* ProENGINE-Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ProENGINE-Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD200A0B16C1318A00666B06 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
+		FD200A0C16C1318A00666B06 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		FD200A0D16C1318A00666B06 /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
+		FD200A0E16C1318A00666B06 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		FD200A0F16C1318A00666B06 /* ResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceLoader.h; sourceTree = "<group>"; };
+		FD200A1116C131A600666B06 /* Debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debug.cpp; sourceTree = "<group>"; };
+		FD200A1216C131A600666B06 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		FD200A1316C131A600666B06 /* EventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventManager.cpp; sourceTree = "<group>"; };
+		FD200A1416C131A600666B06 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FD200A1516C131A600666B06 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		FD200A1616C131A600666B06 /* ResourceLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceLoader.cpp; sourceTree = "<group>"; };
+		FD200A1D16C1321A00666B06 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../../Programming/SFML/content/frameworks/root/Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		FD200A1E16C1321A00666B06 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../../Programming/SFML/content/frameworks/root/Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		FD200A1F16C1321A00666B06 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../../Programming/SFML/content/frameworks/root/Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		FD200A2016C1321A00666B06 /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../../../../Programming/SFML/content/frameworks/root/Library/Frameworks/SFML.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD2009F316C1312300666B06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD200A2116C1321A00666B06 /* sfml-graphics.framework in Frameworks */,
+				FD200A2216C1321A00666B06 /* sfml-system.framework in Frameworks */,
+				FD200A2316C1321A00666B06 /* sfml-window.framework in Frameworks */,
+				FD200A2416C1321A00666B06 /* SFML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD2009EB16C1312300666B06 = {
+			isa = PBXGroup;
+			children = (
+				FD200A1D16C1321A00666B06 /* sfml-graphics.framework */,
+				FD200A1E16C1321A00666B06 /* sfml-system.framework */,
+				FD200A1F16C1321A00666B06 /* sfml-window.framework */,
+				FD200A2016C1321A00666B06 /* SFML.framework */,
+				FD2009F816C1312300666B06 /* ProENGINE-Mac */,
+				FD2009F616C1312300666B06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD2009F616C1312300666B06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD2009F516C1312300666B06 /* ProENGINE-Mac */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD2009F816C1312300666B06 /* ProENGINE-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				FD200A1016C1319000666B06 /* Source */,
+				FD200A0A16C1316800666B06 /* Headers */,
+			);
+			path = "ProENGINE-Mac";
+			sourceTree = "<group>";
+		};
+		FD200A0A16C1316800666B06 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FD200A0B16C1318A00666B06 /* Debug.h */,
+				FD200A0C16C1318A00666B06 /* Engine.h */,
+				FD200A0D16C1318A00666B06 /* EventManager.h */,
+				FD200A0E16C1318A00666B06 /* Renderer.h */,
+				FD200A0F16C1318A00666B06 /* ResourceLoader.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		FD200A1016C1319000666B06 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FD200A1116C131A600666B06 /* Debug.cpp */,
+				FD200A1216C131A600666B06 /* Engine.cpp */,
+				FD200A1316C131A600666B06 /* EventManager.cpp */,
+				FD200A1416C131A600666B06 /* main.cpp */,
+				FD200A1516C131A600666B06 /* Renderer.cpp */,
+				FD200A1616C131A600666B06 /* ResourceLoader.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD2009F416C1312300666B06 /* ProENGINE-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD200A0116C1312300666B06 /* Build configuration list for PBXNativeTarget "ProENGINE-Mac" */;
+			buildPhases = (
+				FD2009F216C1312300666B06 /* Sources */,
+				FD2009F316C1312300666B06 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProENGINE-Mac";
+			productName = "ProENGINE-Mac";
+			productReference = FD2009F516C1312300666B06 /* ProENGINE-Mac */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD2009ED16C1312300666B06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Dual-Pro Studios";
+			};
+			buildConfigurationList = FD2009F016C1312300666B06 /* Build configuration list for PBXProject "ProENGINE-Mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD2009EB16C1312300666B06;
+			productRefGroup = FD2009F616C1312300666B06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD2009F416C1312300666B06 /* ProENGINE-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD2009F216C1312300666B06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD200A1716C131A600666B06 /* Debug.cpp in Sources */,
+				FD200A1816C131A600666B06 /* Engine.cpp in Sources */,
+				FD200A1916C131A600666B06 /* EventManager.cpp in Sources */,
+				FD200A1A16C131A600666B06 /* main.cpp in Sources */,
+				FD200A1B16C131A600666B06 /* Renderer.cpp in Sources */,
+				FD200A1C16C131A600666B06 /* ResourceLoader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FD2009FF16C1312300666B06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = "";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(HEADER_SEARCH_PATHS)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SFML_AUDIO = "$(SFML_LINK_PREFIX)sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX)sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "-d";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework ";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_FRAMEWORKS_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_FRAMEWORKS_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX)sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX)sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX)sfml-window$(SFML_LINK_SUFFIX)";
+			};
+			name = Debug;
+		};
+		FD200A0016C1312300666B06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = "";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(HEADER_SEARCH_PATHS)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SFML_AUDIO = "$(SFML_LINK_PREFIX)sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX)sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework ";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_FRAMEWORKS_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_FRAMEWORKS_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX)sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX)sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX)sfml-window$(SFML_LINK_SUFFIX)";
+			};
+			name = Release;
+		};
+		FD200A0216C1312300666B06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Programming/SFML/content/frameworks/root/Library/Frameworks\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FD200A0316C1312300666B06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Programming/SFML/content/frameworks/root/Library/Frameworks\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD2009F016C1312300666B06 /* Build configuration list for PBXProject "ProENGINE-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD2009FF16C1312300666B06 /* Debug */,
+				FD200A0016C1312300666B06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD200A0116C1312300666B06 /* Build configuration list for PBXNativeTarget "ProENGINE-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD200A0216C1312300666B06 /* Debug */,
+				FD200A0316C1312300666B06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD2009ED16C1312300666B06 /* Project object */;
+}
