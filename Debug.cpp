@@ -2,28 +2,10 @@
 #include <iostream>
 #include <fstream>
 
+using namespace lost;
 Debug::Debug() 
 {
 }
-
-
-Debug::Debug(const char* filename, bool printConsole)
-{
-	// Set the global filename to the function param1 
-	fname = filename;
-	// Set the bool printToConsole to the function param2
-	printToConsole = printConsole;
-	// Creates the file with the user inputted filename
-	dbgFile.open(filename);
-	// If the file is open, state that we are ready for debugging, else print an error
-	if (dbgFile.is_open()) {
-		std::cout << "Debug file ready.\n\n";
-	}
-	else {
-		printf("ERROR: %s could not be created!", fname);
-	}
-}
-
 
 Debug::~Debug()
 {
@@ -56,6 +38,24 @@ bool Debug::stop()
 	}
 	else {
 		std::cout << "ERROR: Could not close file";
+		return false;
+	}
+}
+
+bool Debug::start(const char* filename, bool printConsole) {
+	// Set the global filename to the function param1 
+	fname = filename;
+	// Set the bool printToConsole to the function param2
+	printToConsole = printConsole;
+	// Creates the file with the user inputted filename
+	dbgFile.open(filename);
+	// If the file is open, state that we are ready for debugging, else print an error
+	if (dbgFile.is_open()) {
+		std::cout << "Debug file ready.\n\n";
+		return true;
+	}
+	else {
+		printf("ERROR: %s could not be created!", fname);
 		return false;
 	}
 }

@@ -1,6 +1,4 @@
-#include "ResourceLoader.h"
 #include "EventManager.h"
-#include "Renderer.h"
 #include "Debug.h"
 
 namespace lost {
@@ -17,9 +15,10 @@ public:
 private:
 	void gameLoop();
 	std::string versionNum;
-	ResourceLoader loader;
+	//ResourceLoader loader;
 	EventManager manager;
 	Renderer rendere;
+	Debug engine;
 };
 
 }

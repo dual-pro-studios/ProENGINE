@@ -13,7 +13,7 @@ ResourceLoader::~ResourceLoader(void)
 
 void ResourceLoader::load_all()
 {
-	tpaths = "texture3.png";
+	tpaths = "player.png";
 	textures.loadFromFile(tpaths);
 	sprites.setTexture(textures);
 }

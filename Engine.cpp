@@ -13,24 +13,36 @@ Engine::~Engine(void)
 
 void Engine::start()
 {
+	engine.start("engine.dbg", true);
+	engine.print("Engine is starting...\n");
 	rendere.create();
-	loader.load_all();
+	setVersion("2013");
+	//loader.load_all();
+	rendere.createRect();
 	gameLoop();
 }
 
 void Engine::start(int width, int height)
 {
-	rendere.create(width, height, "Pro Engine");
-	setVersion("1.27");
-	loader.load_all();
+	engine.start("engine.dbg", true);
+	engine.print("Engine is starting...\n");
+	rendere.create(width, height, "ProENGINE");
+	setVersion("2");
+	//loader.load_all();
+	rendere.createRect();
 	gameLoop();
 }
 
 void Engine::gameLoop()
 {
-	while(rendere.game.isOpen()) {
-		manager.process_events(rendere.game);
+	while(rendere.gameState == rendere.OPEN) {
 		rendere.render_all();
+		manager.process_events(rendere);
+	}
+	if(rendere.gameState == rendere.CLOSED) {
+		engine.print("Game loop has exited!\n");
+		rendere.clean_up();
+		engine.stop();
 	}
 }
 
