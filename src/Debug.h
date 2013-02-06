@@ -15,7 +15,7 @@ public:
 	// Default destructor
 	~Debug();
 	// The print function; Prints to the console and/or the debug file
-	bool print(char* debugInfo);
+	bool print(const char* debugInfo);
 	// Cleans up stuff
 	bool stop();
 	// Creates the debugger

@@ -11,7 +11,7 @@ Debug::~Debug()
 {
 }
 
-bool Debug::print(char* debugInfo)
+bool Debug::print(const char* debugInfo)
 {
 	// Make sure that it is open, and if printToConsole is true, print to the console
 	if (dbgFile.is_open() && printToConsole) {

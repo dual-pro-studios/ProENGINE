@@ -26,9 +26,11 @@ void EventManager::process_events(Renderer& game)
 	}
     
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Slash)) {
-        speed++;
-        speed++;
-        speed++;
+        speed += 3;
+    }
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
+        speed -= 2;
     }
     
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {

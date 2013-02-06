@@ -27,7 +27,7 @@ void Engine::start(int width, int height)
 	engine.start("engine.dbg", true);
 	engine.print("Engine is starting...\n");
 	rendere.create(width, height, "ProENGINE");
-	setVersion("2015");
+	setVersion("2020");
 	//loader.load_all();
 	rendere.createRect();
 	gameLoop();
