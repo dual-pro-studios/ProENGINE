@@ -14,8 +14,9 @@ EventManager::~EventManager(void)
 
 void EventManager::process_events(Renderer& game)
 {
+    float xvel = 0;
+    float yvel = 0;
 	float speed = 3;
-	float speed2 = 3;
 	
 	game.game.pollEvent(evt);
 
@@ -23,22 +24,32 @@ void EventManager::process_events(Renderer& game)
 		game.game.close();
 		game.gameState = game.CLOSED;
 	}
-
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Slash)) {
+        speed++;
+        speed++;
+        speed++;
+    }
+    
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		game.gameView.move(-speed, 0);
-		game.loader.sprites.move(-speed2, 0);
+		//game.gameView.move(-speed, 0);
+        xvel = -speed;
+		//game.loader.sprites.move(-speed2, 0);
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		game.gameView.move(speed, 0);
-		game.loader.sprites.move(speed2, 0);
+		//game.gameView.move(speed, 0);
+        xvel = speed;
+		//game.loader.sprites.move(speed2, 0);
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		game.gameView.move(0, -speed);
-		game.loader.sprites.move(0, -speed2);
+		//game.gameView.move(0, -speed);
+        yvel = -speed;
+		//game.loader.sprites.move(0, -speed2);
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		game.gameView.move(0, speed);
-		game.loader.sprites.move(0, speed2);
+		//game.gameView.move(0, speed);
+        yvel = speed;
+		//game.loader.sprites.move(0, speed2);
 	}
 
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
@@ -52,4 +63,7 @@ void EventManager::process_events(Renderer& game)
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)) {
 		game.gameView.rotate(-speed);
 	}
+    
+    game.gameView.move(xvel, yvel);
+    game.loader.sprites.move(xvel, yvel);
 }
