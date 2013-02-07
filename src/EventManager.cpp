@@ -89,5 +89,6 @@ void EventManager::process_events(Renderer& game)
     
     game.gameView.move(xvel, yvel);
     game.loader.sprites[0].move(xvel, yvel);
+    game.loader.sprites[1].move(-xvel, -yvel);
     
 }
