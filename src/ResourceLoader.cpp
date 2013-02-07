@@ -15,5 +15,6 @@ void ResourceLoader::load_all()
 {
 	tpaths = "player.png";
 	textures.loadFromFile(tpaths);
-	sprites.setTexture(textures);
+    sprites[0].setTexture(textures);
+	sprites[1].setTexture(textures);
 }

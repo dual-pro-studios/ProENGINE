@@ -10,7 +10,7 @@ public:
 	~ResourceLoader(void);
 	void load_all();
 	sf::Texture textures;
-	sf::Sprite sprites;
+	sf::Sprite sprites[2];
 private:
 	std::string tpaths;	
 };

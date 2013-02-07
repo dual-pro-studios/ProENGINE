@@ -14,9 +14,9 @@ EventManager::~EventManager(void)
 
 void EventManager::process_events(Renderer& game)
 {
-    float xvel = 0;
-    float yvel = 0;
-	float speed = 3;
+    xvel = 0;
+    yvel = 0;
+	speed = 4;
 	
 	game.game.pollEvent(evt);
 
@@ -30,33 +30,25 @@ void EventManager::process_events(Renderer& game)
     }
     
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
-        speed -= 2;
+        speed -= 3;
     }
     
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		//game.gameView.move(-speed, 0);
-        xvel = -speed;
-		//game.loader.sprites.move(-speed2, 0);
+        xvel -= speed;
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		//game.gameView.move(speed, 0);
-        xvel = speed;
-		//game.loader.sprites.move(speed2, 0);
+        xvel += speed;
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		//game.gameView.move(0, -speed);
-        yvel = -speed;
-		//game.loader.sprites.move(0, -speed2);
+        yvel -= speed;
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		//game.gameView.move(0, speed);
-        yvel = speed;
-		//game.loader.sprites.move(0, speed2);
+        yvel += speed;
 	}
 
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
 		game.gameView.reset(sf::FloatRect(0, 0, 640, 480));
-		game.loader.sprites.setPosition(304, 218);
+		game.loader.sprites[0].setPosition(304, 218);
 	}
 
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)){
@@ -66,6 +58,36 @@ void EventManager::process_events(Renderer& game)
 		game.gameView.rotate(-speed);
 	}
     
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+        game.gameView.zoom(1.05);
+    }
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+        game.gameView.zoom(0.9539);
+    }
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Back)) {
+        for(int i = 0; i < 5; i++) {
+            game.objs[i].rotate(speed);
+        }
+        game.loader.sprites[1].rotate(speed);
+    }
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::V)) {
+        game.loader.sprites[1].scale(0.99, 0.99);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::B)) {
+        game.loader.sprites[1].scale(1.01, 1.01);
+    }
+    
+    if(testcol.check_collision(game.loader.sprites[0], game.loader.sprites[1])) {
+        std::cout << "[EVENTMANAGER]: Collision Detected!\n";
+    }
+    else {
+        std::cout << "[EVENTMANAGER]: No Collision.\n";
+    }
+    
     game.gameView.move(xvel, yvel);
-    game.loader.sprites.move(xvel, yvel);
+    game.loader.sprites[0].move(xvel, yvel);
+    
 }

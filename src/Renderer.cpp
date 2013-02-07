@@ -40,9 +40,13 @@ void Renderer::create()
 
 void Renderer::createRect()
 {
-	objIndex = 5;
-	loader.sprites.setPosition(304, 218);
-	loader.sprites.setColor(sf::Color::Color(255, 255, 255, 255));
+	objIndex =  5;
+	loader.sprites[0].setPosition(304, 218);
+	loader.sprites[0].setColor(sf::Color::Color(255, 255, 255, 255));
+    loader.sprites[0].setScale(2, 2);
+    loader.sprites[1].setPosition(200, 100);
+    loader.sprites[1].setColor(sf::Color::Color(134, 200, 233, 200));
+    loader.sprites[1].setScale(2, 2);
 	objs = new sf::RectangleShape[objIndex];
 	objs[0].setPosition(0, 0);
 	objs[0].setFillColor(sf::Color::Magenta);
@@ -50,6 +54,9 @@ void Renderer::createRect()
 	objs[1].setPosition(32,0);
 	objs[1].setFillColor(sf::Color::Green);
 	objs[1].setSize(sf::Vector2f(32, 32));
+    objs[2].setPosition(96,32);
+	objs[2].setFillColor(sf::Color::Blue);
+	objs[2].setSize(sf::Vector2f(100, 50));
 	objs[4].setPosition(300, 245);
 	objs[4].setFillColor(sf::Color::Red);
 	objs[4].setSize(sf::Vector2f(50, 50));
@@ -64,7 +71,8 @@ void Renderer::render_objs()
 		game.draw(objs[i]);
 		i++;
 	}
-	game.draw(loader.sprites);
+	game.draw(loader.sprites[0]);
+    game.draw(loader.sprites[1]);
 }
 
 void Renderer::clean_up()
