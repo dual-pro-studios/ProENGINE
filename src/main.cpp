@@ -1,11 +1,41 @@
 #include "Engine.h"
 #include <iostream>
+#include <string>
+#include <SFML/Audio.hpp>
+
+using namespace std;
 
 int main(int argc, char* argv[]) {
+    lost::Debug md;
+    md.start("main.dbg", true);
+    md.print("Initializing start music...\n");
+    sf::Music smb;
+    smb.openFromFile("mario.ogg");
+    md.print("Music initiated!\n");
+    md.print("Setting up splashscreen...\n");
+    sf::RenderWindow ss(sf::VideoMode(640, 480), "Splash Screen", sf::Style::None);
+    sf::Texture sst;
+    sst.loadFromFile("splash.png");
+    sf::Sprite sss;
+    sss.setTexture(sst);
+    sss.setPosition(0, -15);
+    ss.clear();
+    ss.draw(sss);
+    ss.display();
+    md.print("Splashscreen loaded and displayed!\n");
+    md.print("Sleeping for 2 seconds.\n");
+    smb.play();
+    sleep(2);
+    ss.close();
+    smb.stop();
+    md.print("Splashscreen closed!\n");
+    md.print("Playing start music...\n");
+    md.print("Start music playing!\n");
+    md.print("Initializing engine...\n");
 	lost::Engine lsengine;
-	//Debug debugger("debug.dbg", true);
-	//debugger.print("Starting Engine...\n");
+    md.print("Engine created!\n");
 	lsengine.start(640, 480);
+    md.print("Engine has closed!\n");
 
 	return 0;
 }

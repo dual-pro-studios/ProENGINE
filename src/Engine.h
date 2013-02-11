@@ -16,7 +16,7 @@ private:
 	void gameLoop();
 	std::string versionNum;
 	//ResourceLoader loader;
-	EventManager manager;
+    EventManager manager;
 	Renderer rendere;
 	Debug engine;
 };

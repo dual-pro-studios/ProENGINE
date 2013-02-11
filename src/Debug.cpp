@@ -1,6 +1,4 @@
 #include "Debug.h"
-#include <iostream>
-#include <fstream>
 
 using namespace lost;
 Debug::Debug() 
