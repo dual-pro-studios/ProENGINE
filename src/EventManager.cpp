@@ -14,6 +14,11 @@ EventManager::~EventManager(void)
 
 void EventManager::process_events(Renderer &game)
 {
+<<<<<<< HEAD
+    time = game.getRawFPS();
+    TextBox testbox("Hi!");
+=======
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
     anims.setFrameSize(18, 28);
     xvel = 0;
     yvel = 0;
@@ -34,7 +39,10 @@ void EventManager::process_events(Renderer &game)
             if(direction == LEFT) {
                 for(int i = 0; i <   game.getFPS(); i++) {
                       game.loader.sprites[0].move(-speed *   game.getRawFPS(), 0);
+<<<<<<< HEAD
+=======
                       game.gameView.setCenter(game.loader.sprites[0].getPosition().x + 16,   game.loader.sprites[0].getPosition().y + 35);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
                       game.setTextPosition(  game.gameView.getCenter().x - 320, game.gameView.getCenter().y - 240);
                       game.render_all();
                 }
@@ -42,7 +50,10 @@ void EventManager::process_events(Renderer &game)
             if(direction == RIGHT) {
                 for(int i = 0; i < 32; i++) {
                       game.loader.sprites[0].move(speed *   game.getRawFPS(), 0);
+<<<<<<< HEAD
+=======
                       game. gameView.setCenter(  game.loader.sprites[0].getPosition().x + 16,   game.loader.sprites[0].getPosition().y + 35);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
                       game.setTextPosition(  game. gameView.getCenter().x - 320,   game. gameView.getCenter().y - 240);
                       game.render_all();
                 }
@@ -50,7 +61,10 @@ void EventManager::process_events(Renderer &game)
             if(direction == UP) {
                 for(int i = 0; i < 32; i++) {
                      game.loader.sprites[0].move(0, -speed *  game.getRawFPS());
+<<<<<<< HEAD
+=======
                      game. gameView.setCenter( game.loader.sprites[0].getPosition().x + 16,  game.loader.sprites[0].getPosition().y + 35);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
                      game.setTextPosition( game. gameView.getCenter().x - 320,  game. gameView.getCenter().y - 240);
                      game.render_all();
                 }
@@ -58,7 +72,10 @@ void EventManager::process_events(Renderer &game)
             if(direction == DOWN) {
                 for(int i = 0; i < 32; i++) {
                      game.loader.sprites[0].move(0, speed *  game.getRawFPS());
+<<<<<<< HEAD
+=======
                      game. gameView.setCenter( game.loader.sprites[0].getPosition().x + 16,  game.loader.sprites[0].getPosition().y + 35);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
                      game.setTextPosition( game. gameView.getCenter().x - 320,  game. gameView.getCenter().y - 240);
                      game.render_all();
                 }
@@ -77,9 +94,19 @@ void EventManager::process_events(Renderer &game)
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && sf::Keyboard::isKeyPressed(sf::Keyboard::LSystem)) {
          game.close_window();
     }
+<<<<<<< HEAD
+    
+    if(evt.type == sf::Event::Resized) {
+        game.game.setSize(sf::Vector2u(game.game.getSize().x, game.game.getSize().y));
+    }
+    
+    // Running/Sneaking (Movement)
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
+=======
     
     // Running/Sneaking (Movement)
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Slash)) {
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
         speed += speed/2;
     }
     
@@ -110,14 +137,23 @@ void EventManager::process_events(Renderer &game)
     // Resets Position of Camera and other GUI style stuff
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
          game.setSpritePos(304, 218, 0);
+<<<<<<< HEAD
+         game.gameView.setRotation(0);
+		 game.gameView.setCenter( game.loader.sprites[0].getPosition().x + game.loader.sprites[0].getGlobalBounds().width/2,  game.loader.sprites[0].getPosition().y + game.loader.sprites[0].getGlobalBounds().height/2);
+=======
         game.gameView.setRotation(0);
 		 game. gameView.setCenter( game.loader.sprites[0].getPosition().x + 16,  game.loader.sprites[0].getPosition().y + 35);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
          game.setObjPos(0, 0, 5);
          game.setTextPosition(0, 0);
          game.setTextRotation(0);
 	}
 
+<<<<<<< HEAD
+    /* Rotation
+=======
     // Rotation
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)){
 		 game.rotateView(speed *  game.getRawFPS());
         // game.rotateObj(speed *  game.getRawFPS(), 3);
@@ -125,6 +161,43 @@ void EventManager::process_events(Renderer &game)
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)) {
 		 game.rotateView(-speed *  game.getRawFPS());
         // game.rotateObj(-speed *  game.getRawFPS(), 3);
+<<<<<<< HEAD
+	}*/
+    
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+        game.gameView.setSize(game.game.getSize().x * 2, game.game.getSize().y * 2);
+        game.setTextSizes(15 * 2);
+        game.setTextPosition(0, 0);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        game.gameView.setSize(game.game.getSize().x, game.game.getSize().y);
+        game.setTextSizes(15);
+        game.setTextPosition(0, 0);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+        game.gameView.setSize(game.game.getSize().x / 2, game.game.getSize().y / 2);
+        game.setTextSizes(15 / 2);
+        game.setTextPosition(0, 0);
+    }
+     
+    
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
+        game.game.setVerticalSyncEnabled(false);
+        game.setFPSLimit(30);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)) {
+        game.setFPSLimit(60);
+        game.game.setVerticalSyncEnabled(true);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
+        game.setFPSLimit(5);
+        game.game.setVerticalSyncEnabled(false);
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+        game.game.setVerticalSyncEnabled(false);
+        game.setFPSLimit(0);
+=======
 	}
     
     /*** Zoom function
@@ -150,6 +223,7 @@ void EventManager::process_events(Renderer &game)
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
          game.setFPSLimit(0);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
     }
     
     // Random Rotation Test
@@ -222,6 +296,33 @@ void EventManager::process_events(Renderer &game)
         //std::cout << "[EVENTMANAGER]: No Collision.\n";
          game.setObjColor(sf::Color(255, 0, 0, 0), 5);
     }*/
+<<<<<<< HEAD
+    
+    
+    
+    // Apply the movement
+    if(game.loader.sprites[0].getPosition().x > game.gameView.getCenter().x + 220) {
+        game.gameView.move(speed * game.getRawFPS(), 0);
+    }
+    if(game.loader.sprites[0].getPosition().x < game.gameView.getCenter().x - 260) {
+        game.gameView.move(-speed * game.getRawFPS(), 0);
+    }
+    if(game.loader.sprites[0].getPosition().y > game.gameView.getCenter().y + 120) {
+        game.gameView.move(0, speed * game.getRawFPS());
+    }
+    if(game.loader.sprites[0].getPosition().y < game.gameView.getCenter().y - 180) {
+        game.gameView.move(0, -speed * game.getRawFPS());
+    }
+    game.loader.sprites[0].move(xvel *  game.getRawFPS(), yvel *  game.getRawFPS());
+    game.setTextPosition( game. gameView.getCenter().x - game.gameView.getSize().x/2,  game. gameView.getCenter().y - game.gameView.getSize().y/2);
+    game.objs[5].move(xvel *  game.getRawFPS(), yvel *  game.getRawFPS());
+    anims.animate(game.loader.sprites[0], game);
+    anims.animate(game.loader.sprites[1], game);
+    if(testcol.check_collision(game.loader.sprites[0], game.loader.sprites[1])) {
+        testbox.show(game);
+    }
+    testbox.show(game);
+=======
     
     // Apply the movement
     game. gameView.move(xvel *  game.getRawFPS(), yvel *  game.getRawFPS());
@@ -229,4 +330,5 @@ void EventManager::process_events(Renderer &game)
     game.setTextPosition( game. gameView.getCenter().x - 320,  game. gameView.getCenter().y - 240);
     game.objs[5].move(xvel *  game.getRawFPS(), yvel *  game.getRawFPS());
     anims.animate(game);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 }

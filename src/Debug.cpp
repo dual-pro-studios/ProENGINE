@@ -49,7 +49,6 @@ bool Debug::start(const char* filename, bool printConsole) {
 	dbgFile.open(filename);
 	// If the file is open, state that we are ready for debugging, else print an error
 	if (dbgFile.is_open()) {
-		std::cout << "Debug file ready.\n\n";
 		return true;
 	}
 	else {

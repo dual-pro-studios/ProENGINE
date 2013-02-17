@@ -2,6 +2,7 @@
 #define __ProENGINE_Mac__Collision__
 
 #include <SFML/Graphics.hpp>
+#include "Animation.h"
 
 class Collision {
 public:

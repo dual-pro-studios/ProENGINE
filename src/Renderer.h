@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include "ResourceLoader.h"
+#include "LevelLoader.h"
 
 namespace lost {
 
@@ -30,8 +31,15 @@ public:
     void rotateSprite(float degree, int spriteIndex);
     void setSpritePos(float x, float y, int spriteIndex);
     void setSpriteScale(float xfactor, float yfactor, int spriteIndex);
+<<<<<<< HEAD
+    unsigned int getTextSize();
     void setTextSize(sf::Vector2f size);
     void setTextSize(float width, float height);
+    void setTextSizes(unsigned int size);
+=======
+    void setTextSize(sf::Vector2f size);
+    void setTextSize(float width, float height);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
     void setTextPosition(float x, float y);
     void setTextRotation(float degree);
     void rotateText(float degree);
@@ -41,6 +49,7 @@ public:
 	~Renderer(void);
 	sf::RenderWindow game;
 	ResourceLoader loader;
+    LevelLoader l_loader;
 	sf::View gameView;
 	sf::RectangleShape* objs;
 private:

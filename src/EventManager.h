@@ -1,7 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
+<<<<<<< HEAD
+=======
 #include "Animation.h"
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 #include "Collision.h"
 
 namespace lost {
@@ -19,6 +22,8 @@ public:
     float yvel;
     float speed;
 private:
+    bool within;
+    float time;
 	sf::Event evt;
     Animation anims;
     Collision testcol;

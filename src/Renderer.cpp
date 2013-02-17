@@ -54,7 +54,8 @@ void Renderer::render_all()
 void Renderer::create(int width, int height, const std::string title)
 {
 	loader.load_all();
-	game.create(sf::VideoMode(width, height), title);
+    l_loader.load("level.txt");
+	game.create(sf::VideoMode(width, height), title , sf::Style::Fullscreen);
 	gameView.reset(sf::FloatRect(0, 0, width, height));
 	game.setView(gameView);
 	game.setFramerateLimit(60);
@@ -88,6 +89,7 @@ void Renderer::createRect()
     loader.sprites[1].setPosition(200, 100);
     loader.sprites[1].setColor(sf::Color::Color(134, 200, 233, 200));
     loader.sprites[1].setScale(2, 2);
+    loader.sprites[1].setPosition(loader.sprites[0].getPosition().x, loader.sprites[0].getPosition().y);
 	objs = new sf::RectangleShape[objIndex];
 	objs[0].setPosition(0, 0);
 	objs[0].setFillColor(sf::Color::Magenta);
@@ -104,22 +106,31 @@ void Renderer::createRect()
 	objs[4].setPosition(300, 245);
 	objs[4].setFillColor(sf::Color::Red);
 	objs[4].setSize(sf::Vector2f(50, 50));
+<<<<<<< HEAD
+    gameView.setCenter(loader.sprites[0].getPosition().x + loader.sprites[0].getLocalBounds().width/2, loader.sprites[0].getPosition().y + loader.sprites[0].getLocalBounds().height/2);
+=======
     gameView.setCenter(loader.sprites[0].getPosition().x + 16, loader.sprites[0].getPosition().y + 35);
 	//objIndex = sizeof(objs);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 }
 
 void Renderer::render_objs()
 {
-	int i = 0;
+    l_loader.render(game, gameView);
+	/*int i = 0;
 	while (i < objIndex) {
 		game.draw(objs[i]);
 		i++;
-	}
+	}*/
 	game.draw(loader.sprites[0]);
     game.draw(loader.sprites[1]);
     game.draw(fpsTXT);
     game.draw(posTXT);
+<<<<<<< HEAD
+    //game.draw(objs[5]);
+=======
     game.draw(objs[5]);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 }
 
 void Renderer::clean_up()
@@ -148,7 +159,11 @@ void Renderer::rotateText(float degree)
 void Renderer::setTextPosition(float x, float y)
 {
     fpsTXT.setPosition(x, y);
+<<<<<<< HEAD
+    posTXT.setPosition(x, y + getTextSize());
+=======
     posTXT.setPosition(x, y + 20);
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 }
 
 void Renderer::setTextRotation(float degree)
@@ -169,6 +184,15 @@ void Renderer::setTextSize(float width, float height)
     posTXT.setScale(width, height);
 }
 
+<<<<<<< HEAD
+void Renderer::setTextSizes(unsigned int size)
+{
+    fpsTXT.setCharacterSize(size);
+    posTXT.setCharacterSize(size);
+}
+
+=======
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 void Renderer::renderFPS()
 {
     renderFPSb = !renderFPSb;
@@ -233,4 +257,11 @@ void Renderer::setGameState(windowState gamestate)
 sf::Sprite Renderer::getPlayerSprite()
 {
     return loader.sprites[0];
+<<<<<<< HEAD
+}
+
+unsigned int Renderer::getTextSize() {
+    return fpsTXT.getGlobalBounds().height;
+=======
+>>>>>>> 1f90335aab7f72e6bf42ee04522c09451002267c
 }
